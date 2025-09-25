@@ -17,14 +17,45 @@ public class SandwichShop {
 
         if (sandwichChoice == 1) {
             finalCost = regularSandwich;
-            System.out.println("\nThat will be one Regular Sandwich! for $" + regularSandwich + ".\n");
+            System.out.println("\nThat will be one Regular Sandwich for $" + regularSandwich + ".\n");
             System.out.print("You may qualify for a discount! Please enter your age: ");
             int userAge = keyboard.nextInt();
+
             if (userAge <= 17) {
                 System.out.println("You are 17 years old or younger. You get a 10% discount!");
                 finalCost *= studentDiscount;
                 System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
+            }
+            else if (userAge >= 65) {
+                System.out.println("You are 65 years or older. You get a 20% discount!");
+                finalCost *= seniorDiscount;
+                System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
+            }
+            else {
+                System.out.println("No discount applicable...");
+                System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
+            }
+        }
 
+        else {
+            finalCost = largeSandwich;
+            System.out.println("\nThat will be one Large Sandwich for $" + largeSandwich + ".\n");
+            System.out.println("You may qualify for a discount! Please enter your age: ");
+            int userAge = keyboard.nextInt();
+
+            if (userAge <= 17) {
+                System.out.println("You are 17 years old or younger. You get a 10% discount!");
+                finalCost *= studentDiscount;
+                System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
+            }
+            else if (userAge >= 65) {
+                System.out.println("You are 65 years or older. You get a 20% discount!");
+                finalCost *= seniorDiscount;
+                System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
+            }
+            else {
+                System.out.println("No discount applicable...");
+                System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
             }
         }
 
