@@ -14,10 +14,20 @@ public class SandwichShopModified {
         System.out.println("Welcome to the SandwichShop!\nWhat type Sandwich do you want?");
         System.out.println("1) Regular - $5.45\n2) Large - $8.95");
         int sandwichChoice = keyboard.nextInt();
+        keyboard.nextLine();
 
         if (sandwichChoice == 1) {
             finalCost = regularSandwich;
             System.out.println("\nThat will be one Regular Sandwich for $" + regularSandwich + ".\n");
+            System.out.println("Would you like the sandwich to be loaded? If so, it will add $1.00 to your total. (Y/N)");
+            String loadedOption = keyboard.nextLine();
+            if (loadedOption.equalsIgnoreCase("Y")) {
+                finalCost += 1.0;
+                System.out.println("You're getting the whole ShaBang!");
+            }
+            else {
+                System.out.println("Loaded option Declined!");
+            }
             System.out.print("You may qualify for a discount! Please enter your age: ");
             int userAge = keyboard.nextInt();
 
