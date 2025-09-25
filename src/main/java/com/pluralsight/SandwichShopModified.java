@@ -19,14 +19,15 @@ public class SandwichShopModified {
         if (sandwichChoice == 1) {
             finalCost = regularSandwich;
             System.out.println("\nThat will be one Regular Sandwich for $" + regularSandwich + ".\n");
+
             System.out.println("Would you like the sandwich to be loaded? If so, it will add $1.00 to your total. (Y/N)");
             String loadedOption = keyboard.nextLine();
             if (loadedOption.equalsIgnoreCase("Y")) {
                 finalCost += 1.0;
-                System.out.println("You're getting the whole ShaBang!");
+                System.out.println("\nYou're getting the whole ShaBang!\n");
             }
             else {
-                System.out.println("Loaded option Declined!");
+                System.out.println("\nLoaded option Declined!\n");
             }
             System.out.print("You may qualify for a discount! Please enter your age: ");
             int userAge = keyboard.nextInt();
@@ -50,6 +51,17 @@ public class SandwichShopModified {
         else {
             finalCost = largeSandwich;
             System.out.println("\nThat will be one Large Sandwich for $" + largeSandwich + ".\n");
+
+            System.out.println("Would you like the sandwich to be loaded? If so, it will add $1.00 to your total. (Y/N)");
+            String loadedOption = keyboard.nextLine();
+            if (loadedOption.equalsIgnoreCase("Y")) {
+                finalCost += 1.0;
+                System.out.println("\nYou're getting the whole ShaBang!\n");
+            }
+            else {
+                System.out.println("\nLoaded option Declined!\n");
+            }
+
             System.out.println("You may qualify for a discount! Please enter your age: ");
             int userAge = keyboard.nextInt();
 
