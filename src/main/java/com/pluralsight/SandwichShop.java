@@ -7,8 +7,8 @@ public class SandwichShop {
         double regularSandwich = 5.45;
         double largeSandwich = 8.95;
         double finalCost;
-        double studentDiscount = 1.1;
-        double seniorDiscount = 1.2;
+        double studentDiscount = 0.1;
+        double seniorDiscount = 0.2;
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Welcome to the SandwichShop!\nWhat type Sandwich do you want?");
@@ -23,12 +23,12 @@ public class SandwichShop {
 
             if (userAge <= 17) {
                 System.out.println("You are 17 years old or younger. You get a 10% discount!");
-                finalCost *= studentDiscount;
+                finalCost = finalCost * (1 - studentDiscount);
                 System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
             }
             else if (userAge >= 65) {
                 System.out.println("You are 65 years or older. You get a 20% discount!");
-                finalCost *= seniorDiscount;
+                finalCost = finalCost * (1 - seniorDiscount);
                 System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
             }
             else {
@@ -45,12 +45,12 @@ public class SandwichShop {
 
             if (userAge <= 17) {
                 System.out.println("You are 17 years old or younger. You get a 10% discount!");
-                finalCost *= studentDiscount;
+                finalCost = finalCost * (1 - studentDiscount);
                 System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
             }
             else if (userAge >= 65) {
                 System.out.println("You are 65 years or older. You get a 20% discount!");
-                finalCost *= seniorDiscount;
+                finalCost = finalCost * (1 - seniorDiscount);
                 System.out.printf("\nYour total for today will be $%.2f. Cash or credit?", finalCost);
             }
             else {
